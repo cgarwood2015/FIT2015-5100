@@ -21,7 +21,7 @@ public class Account {
 		this.name = name; //assign name to instance variable
 		
 		if(balance > 0.0)
-			this.balance = balance;  //Assign balance to instance variable		
+			this.balance = balance;  //Assign balance to instance variable. Add		
 	}
 	//Mehtod to add to account
 	public void deposit(double depositAmount){
