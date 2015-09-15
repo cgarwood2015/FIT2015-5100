@@ -1,0 +1,43 @@
+Difference between preincrementing and postincrementing
+
+Preincrementing a variable and postincrementing variable essentially change the
+value of the variable, however, they are done at different times.
+
+Postincrementing the variable ensures that whatever other action appears in
+the same statement as the increment is executed first before the increment is
+done.
+
+This may be demonstrated through an example
+
+int i = 10;  //declare and initialize i to 10
+
+System.out.println("The value of i=%d%n",i); //Output: i=10
+System.out.println("The value of i=%d%n",i++);  //Output: i=10 
+System.out.println("The value of i=%d%n",i);  //Output:i=11 
+
+Preincrement on the otherhand increments the the variable BEFORE it execute any
+other action within the same statement.  Using the same example above, the result 
+would be:
+
+int i = 10;  //declare and initialize i to 10
+
+System.out.println("The value of i=%d%n",i); //Output: i=10
+System.out.println("The value of i=%d%n",++i);  //Output: i=11 
+System.out.println("The value of i=%d%n",i);  //Output:i=11 
+
+Also, for(int j=0;j < 3;++j){System.out.println("The value of j=%d%n",j);}
+
+Output (Preincrement): 
+->The value of j=1
+->The value of j=2
+->The value of j=3
+
+Note the difference in output if this statement implemented postincrement
+
+for(int j=0;j<3;j++){System.out.println("The value of j=%d%n",j);}
+Output (Postincrement): 
+->The value of j=0
+->The value of j=1
+->The value of j=2
+
+
