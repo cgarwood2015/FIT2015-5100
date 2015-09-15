@@ -5,7 +5,7 @@ package ch03;
  * Methods:  		displayDate - Method to add to account
  * 					getters and setters
  * 
- * Exceptions:		NONE
+ * Exceptions:		NONE/NONE
  * 					  
  * 
  */
