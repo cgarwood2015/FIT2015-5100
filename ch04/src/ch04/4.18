@@ -1,0 +1,65 @@
+Program Development using Top-down design, Stepwise refinement
+==============================================================
+
+Program function 
+================
+Determine the balance of customers of a store based on a number of
+factors and also determine if the customers have exceeded their credit 
+limits.
+                  
+Redefinement Step 1
+===================
+Initialize variables
+Input and calculate balance of credit
+Output the balance and output of the user credit limit is exceed.
+
+Redefinement Step 2 - Initialize variables
+==========================================
+Initialize account = 0.00
+Initialize beg_balance = 0.00
+Initialize mthly_total_charges=0.00
+Initialize mthly_total_credit=0.00
+Initialize credit_allowed=0.00
+Initialize end_balance=0.00
+Initialize excess_credit=0.00
+
+Redefinement Step 3 - Input and calculate balance of credit
+===========================================================
+Prompt the user to enter customer account number
+Input the first account number  => Possible sentinel value
+While the value not sentinel value
+	Prompt the user to enter beginning balance
+	Input and assign value entered to beg_balance
+	
+	Prompt the user to enter Total items charged for the month
+	Input and assign value to mthly_total_charges
+	
+	Prompt the user to enter Total credit applied to the customers account this month
+	Input and assign value to mthly_total_credit
+	
+	Prompt the user to enter Total credit applied to the customers account this month
+	Input and assign value to mthly_total_credit
+	
+	Prompt the user to enter customer's credit limited
+	Input and assign value to credit_allowed
+	
+	Add Beginning Balance to monthly charges and subtract total credit applied to customer
+	and assign to the end balance.
+	
+	Substract end balance from credit allowed and assigned to excess_credit  
+	
+	Prompt the user to enter customer account number
+	Input the account number  => Possible sentinel value
+
+
+Redefinement Step 4 - Output the balance and output of the user credit limit is exceed.
+=======================================================================================
+Print end balance
+
+if excress_credit is less than zero
+	Print credit limit exceeded
+	
+	
+
+
+ 
