@@ -1,0 +1,64 @@
+Program Development using Top-down design, Stepwise refinement
+==============================================================
+
+Program function 
+================
+Output a set of values in tabular form using looping
+
+Redefinement Step 1
+===================
+Initialize variable
+Output table header
+Output column values
+Increment variables
+
+Redefinement Step 2 - Initialize variables
+==========================================
+Initialize j = 0
+
+Redefinement Step 3 - Output tabular header
+==========================================
+Print table header using the tab placeholder to 
+space the heading values horizontally
+
+Redefinement Step 4 - Output column values
+==========================================
+while j is less than or equal to 5
+	Print j,(j*10),(j*100), (j*1000)
+
+Redefinement Step 4 - Increment variables
+==========================================
+j++
+
+
+Program Code
+=============
+package ch04;
+
+public class TabularOutput {
+
+	public static void main(String[] args) {
+		int j = 1;		
+		System.out.println("N\t10*N\t100*N\t1000*N"); //Output the heading note the tab position.
+		
+		while(j <= 5){
+			System.out.printf("%d\t%d\t%d\t%d%n",j,(j*10),(j*100),(j*1000));  //Display the values.
+			j++;  //post increment j.
+		} //End While.
+
+	}
+
+} //End TabularOutput
+
+
+Output
+======
+N	10*N	100*N	1000*N
+1	10		100		1000
+2	20		200		2000
+3	30		300		3000
+4	40		400		4000
+5	50		500		5000
+
+
+
