@@ -1,0 +1,36 @@
+a. if(age >= 65);  => Error: No semi-colon should follow the if construct and age is not declared.
+	 System.out.println("Age is greater than or equal to 65");	
+   else
+   		System.out.println("Age is less than 65)";  =>Error: Quotes (open and close)
+   		                                              in a print statement be between
+   		                                              the parenthesis.
+   		
+Correction
+===========
+int age = 27;
+if(age >= 65)
+   System.out.println("Age is greater than or equal to 65");
+else
+   System.out.println("Age is less than 65");   
+
+   		
+b. int x=1, total;  
+   while(x <= 10){
+      total += x;  =>Error: local variables must be initialized if intent to use.
+      ++x;
+   }    
+
+Correction
+==========
+
+
+c. while(x <= 10)   => Error: x is an undeclared variable. 
+        total += x; => Error: total and x are undeclared variables.
+        ++x;        => Error: x is an undeclared variable.   
+         
+d.  while(y > 0){   => There is no closing brace for the while loop.   
+        System.out.println(y);
+        ++y;
+              
+              
+                                              
