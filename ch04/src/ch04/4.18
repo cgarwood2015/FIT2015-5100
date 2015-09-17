@@ -15,13 +15,13 @@ Output the balance and output of the user credit limit is exceed.
 
 Redefinement Step 2 - Initialize variables
 ==========================================
-Initialize account = 0.00
-Initialize beg_balance = 0.00
-Initialize mthly_total_charges=0.00
-Initialize mthly_total_credit=0.00
-Initialize credit_allowed=0.00
-Initialize end_balance=0.00
-Initialize excess_credit=0.00
+Initialize account = 0
+Initialize beg_balance = 0
+Initialize mthly_total_charges=0
+Initialize mthly_total_credit=0
+Initialize credit_allowed=0
+Initialize end_balance=0
+Initialize excess_credit=0
 
 Redefinement Step 3 - Input and calculate balance of credit
 ===========================================================
