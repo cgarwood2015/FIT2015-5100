@@ -5,24 +5,22 @@ import java.lang.Math;
 public class CreditLimitCalculator {
 
 	public static void main(String[] args) {
-		int accountNumber = 0;
-		int beginBalance = 0;
-		int totalChanges = 0;
-		int totalCredit = 0;
-		int monthlyCredit = 0;
-		int creditLimit = 0;
-		int endBalance = 0;
-		int excess_creidt = 0;
+		int accountNumber = 0;  //Account Number
+		int beginBalance = 0;  //Opening Balance
+		int totalChanges = 0; //Charges
+		int monthlyCredit = 0; //Monthly Credit
+		int creditLimit = 0; //Credit Limit Allowed
+		int endBalance = 0;  //Closing Balance
 		
 		try{
 			System.out.print("Enter Account Number or -1 to exit:");
 			accountNumber = ScannerUtility.getArithmeticInput();
 			
-			while(accountNumber != -1){
+			while(accountNumber != -1){ //Senteniel value, we are not sure how man account/customer the store has
 				System.out.print("Enter Opening Balance :");
-				beginBalance = ScannerUtility.getArithmeticInput();
+				beginBalance = ScannerUtility.getArithmeticInput();  
 				
-				System.out.print("Enter Total Items Charged:");
+				System.out.print("Enter Total Items Charged:");  
 				totalChanges = ScannerUtility.getArithmeticInput();
 				
 				if(totalChanges < 0){
@@ -35,7 +33,7 @@ public class CreditLimitCalculator {
 					continue;
 				}
 				
-				System.out.print("Enter Total Monthly Credit:");
+				System.out.print("Enter Total Monthly Credit:");  
 				monthlyCredit = ScannerUtility.getArithmeticInput();
 				
 				if(monthlyCredit < 0){
@@ -48,7 +46,7 @@ public class CreditLimitCalculator {
 					continue;
 				}
 				
-				System.out.print("Enter Credit Limit:");
+				System.out.print("Enter Credit Limit:");  
 				creditLimit = ScannerUtility.getArithmeticInput();
 
 				if(creditLimit <= 0){
@@ -62,13 +60,11 @@ public class CreditLimitCalculator {
 				}
 				
 				
-				endBalance = (beginBalance) - ( totalChanges + monthlyCredit);			
-				excess_creidt = creditLimit - endBalance;
-				
+				endBalance = (beginBalance + totalChanges) - monthlyCredit;			
 				System.out.printf("Account %d Closing Balance:%d%n",accountNumber,endBalance);
 				
-				if(excess_creidt < 0){
-					System.out.printf("*** Account %d exceeds credit limit(%d)%n ***",accountNumber,Math.abs(excess_creidt));
+				if(endBalance >  creditLimit){
+					System.out.printf("*** Account %d exceeds credit limit ***%n",accountNumber);
 				}
 				
 				System.out.println("====================================================");
@@ -83,4 +79,4 @@ public class CreditLimitCalculator {
 		
 	}
 
-}
+}  //End Credit Calculator
