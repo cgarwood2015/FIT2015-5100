@@ -1,0 +1,67 @@
+Find and correct the error(s) in each of the following segments of code:
+
+a) For (i = 100, i >= 1, i++)   =>Error: For should be for, semi-colon should be used
+	  System.out.println(i);    => for separation of segment of the for loop 
+	                            =i should be decremented instead of incremented (i--)
+	                            
+Correction
+==========
+for(int i = 100;i >= 1; i--){
+	System.out.println(i); 
+}
+
+b) The following code should print whether integer value is odd or even:
+   switch (value % 2)  Error: value is not declared must be an integer
+   {
+     case 0:  
+     System.out.println("Even integer");   Error: there are not break statement, will fall through
+     case 1:
+     System.out.println("Odd integer");    //there are not break statement, will fall through 
+                                           //while not absolutely neccessary its good  
+                                           programming practice. 
+   }
+   
+ Correction
+ ===========
+ int value = 10;
+ 
+ switch(value % 2){
+ 	case 0:
+ 		System.out.println("Even integer.");
+ 		break;
+ 	
+ 	case 1:
+ 		System.out.println("Odd Integer.");
+ 		break;	//No totally required but Good programming practice
+ }
+ 
+ 
+ 
+ c) The following code should output the odd integers from 19 to 1:
+	for (i = 19; i >= 1; i += 2)  Error: i is not declared, i should be decremented (i-=2)
+		System.out.println(i);
+	
+ Correction
+ ==========
+ for(int i=19; i >= 1; i-=2)
+ 	System.out.println(i);
+ 	
+ 	
+d) The following code should output the even integers from 2 to 100:
+	counter = 2;  Error: counter not declared a type.
+	do
+	{
+		System.out.println( counter );
+		counter += 2;
+	} While ( counter < 100 );  Error: While should be while.
+	
+Correction	 	
+ 
+ int counter = 2;
+ do{
+ 	System.out.println(counter);
+ 	counter +=2;
+ }while(counter < 100);	
+ 
+ 
+ 
